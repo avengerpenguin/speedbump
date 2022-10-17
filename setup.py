@@ -18,6 +18,16 @@ setup(
         "setuptools_scm>=3.3.1",
         "pre-commit",
     ],
+    extras_require={
+        "test": [
+            "pytest",
+            "pytest-pikachu",
+            "pytest-mypy",
+            "pytest-cov",
+            "pytest-shell",
+            "types-PyYAML",
+        ],
+    },
     entry_points={"console_scripts": [f"speedbump = {NAME}.cli:main"]},
-    install_requires=["PyGithub", "typer", "PyYAML"],
+    install_requires=["PyGithub", "typer", "PyYAML", "sh"],
 )
